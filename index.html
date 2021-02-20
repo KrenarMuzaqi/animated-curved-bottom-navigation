@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Animated Bottom Navigation</title>
+  </head>
+  <body>
+    <div class="container">
+      <ul class="nav">
+        <span class="nav-circle"></span>
+        <li class="nav-item">
+          <a href="#" class="nav-item--active">
+            <img src="./home.svg" alt="home icon" class="nav-item--icon" />
+            <span class="nav-item--txt"> Home </span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#">
+            <img src="./search.svg" alt="search icon" class="nav-item--icon" />
+            <span class="nav-item--txt"> Search </span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#">
+            <img src="./order.svg" alt="order icon" class="nav-item--icon" />
+            <span class="nav-item--txt"> Orders </span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#">
+            <img src="./wallet.svg" alt="cash icon" class="nav-item--icon" />
+            <span class="nav-item--txt"> Cash </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="filter-svg">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+          <feColorMatrix
+            in="blur"
+            type="matrix"
+            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+            result="goo"
+          />
+          <feBlend in="SourceGraphic" in2="goo" />
+        </filter>
+      </defs>
+    </svg>
+    <script src="./main.js"></script>
+  </body>
+</html>
